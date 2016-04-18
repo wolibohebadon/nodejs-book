@@ -16,13 +16,13 @@
 
 ##透過 Github 進行協作
 
-- 點選 Github [nodejs-book](https://github.com/imac-cloud/nodejs-book)  並將其fork到自己的專案底下  
+- 點選 Github [nodejs-book](https://github.com/imac-iot/nodejs-book)  並將其fork到自己的專案底下  
 - 在命令列輸入　git clone https://github.com/「USER_NAME」/nodejs-book
 - 在修改完成後 
   - $ git add --all
   - $ git commit -m "Fix issue 「Your Message」"
   - $ git push 
-- 當做完上述步驟時再對 [nodejs-book](https://github.com/imac-cloud/nodejs-book) 提出 `[new pull request]`即可完成貢獻
+- 當做完上述步驟時再對 [nodejs-book](https://github.com/imac-iot/nodejs-book) 提出 `[new pull request]`即可完成貢獻
 
 
 ##Contributor
