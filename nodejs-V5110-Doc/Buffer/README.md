@@ -68,12 +68,12 @@ console.log(buf.toString('ascii'));
 
 ###buf.compare(target[, targetStart[, targetEnd[, sourceStart[, sourceEnd]]]])
 
-- target <Buffer>
-- targetStart <Integer> 在開始比較當下，target中的偏移量。默認值為0。
-- targetEnd <Integer> 在結束比較當下，target的偏移量。當targetStar為undefined時，忽略它。默認值為target.byteLength。
-- sourceStart <Integer> 在開始比較當下，buf的偏移量。當targetStart 為undefined時，請忽略。默認值= 0。
-- sourceEnd <Integer> 在結束比較當下，buf的偏移量。當targetStar 為undefined時，請忽略。默認值=buf.byteLength。
-- Return: <Number>
+- target [Buffer]
+- targetStart [Integer] 在開始比較當下，target中的偏移量。默認值為0。
+- targetEnd [Integer] 在結束比較當下，target的偏移量。當targetStar為undefined時，忽略它。默認值為target.byteLength。
+- sourceStart [Integer] 在開始比較當下，buf的偏移量。當targetStart 為undefined時，請忽略。默認值= 0。
+- sourceEnd [Integer] 在結束比較當下，buf的偏移量。當targetStar 為undefined時，請忽略。默認值=buf.byteLength。
+- Return: [Number]
 
 比較兩個buffer的例子，並回傳數字說明buf是在之前、之後，還是跟target同個排序順序。比較是基於在每個buffer裡的位元組實際序列。
 
@@ -205,11 +205,11 @@ console.log(buf1.equals(buf3));
 ###buf.fill(value[, offset[, end]][, encoding])
 
 
-- value <String> | <Buffer> | <Number>
-- offset <Number> Default: 0
-- end <Number> Default: buf.length
-- encoding <String> Default: 'utf8'
-- Return: <Buffer>
+- value  <String> | <Buffer> | <Number>
+- offset  <Number> Default: 0
+- end  <Number> Default: buf.length
+- encoding  <String> Default: 'utf8'
+- Return: <Buffer>
 
 用指定的質填在Buffer裡面。如果offset(默認值為0)且end(默認值為buf.length) 沒有明確給出，就會填充整個buffer。
 這個方法從Buffer裡面返回一個參考值，所以呼叫可以被鏈接。這意味著一個小的、簡化型的是可以用來創造Buffer。在一行裡面，是允許創造、並用用Buffer來填滿完成。
