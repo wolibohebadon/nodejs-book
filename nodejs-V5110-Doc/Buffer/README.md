@@ -121,11 +121,11 @@ console.log(buf1.compare(buf2, 5, 6, 5));
 
 ###buf.copy(targetBuffer[, targetStart[, sourceStart[, sourceEnd]]])
 
-- targetBuffer <Buffer> Buffer 複製進去
-- targetStart <Number> Default: 0
-- sourceStart <Number> Default: 0
-- sourceEnd <Number> Default: buffer.length
-- Return: <Number> 複製字符串的位元組
+- targetBuffer [Buffer] Buffer 複製進去
+- targetStart [Number] Default: 0
+- sourceStart [Number] Default: 0
+- sourceEnd [Number] Default: buffer.length
+- Return: [Number] 複製字符串的位元組
 
 從Buffer的一個區域中複製資料到targetBuffer的區域，即使目標儲存區與來源重疊。
 舉例：建立兩個Buffer，然後將buf1中第16位元組到第19位元組間的資訊複製到buf2中，並使在buf2中新的字串首字元位於第8位元組：
@@ -163,7 +163,7 @@ console.log(buf.toString());
 ```
 
 ###buf.entries()
-- otherBuffer <Buffer>
+- otherBuffer [Buffer]
 
 從Buffer的內容裡，創建並返回 iterator [index, byte]。
 
@@ -185,8 +185,8 @@ for (var pair of buf.entries()) {
 
 ###buf.equals(otherBuffer)
 
-- otherBuffer <Buffer>
-- Return: <Boolean>
+- otherBuffer [Buffer]
+- Return: [Boolean]
 返回一個boolean，說明this跟otherBuffer是否擁有相同的位元組。
 
 ```javascript
@@ -205,11 +205,11 @@ console.log(buf1.equals(buf3));
 ###buf.fill(value[, offset[, end]][, encoding])
 
 
-- value  <String> | <Buffer> | <Number>
-- offset  <Number> Default: 0
-- end  <Number> Default: buf.length
-- encoding  <String> Default: 'utf8'
-- Return: <Buffer>
+- value  [String] | [Buffer] | [Number]
+- offset  [Number] Default: 0
+- end  [Number] Default: buf.length
+- encoding  [String] Default: 'utf8'
+- Return: [Buffer]
 
 用指定的質填在Buffer裡面。如果offset(默認值為0)且end(默認值為buf.length) 沒有明確給出，就會填充整個buffer。
 這個方法從Buffer裡面返回一個參考值，所以呼叫可以被鏈接。這意味著一個小的、簡化型的是可以用來創造Buffer。在一行裡面，是允許創造、並用用Buffer來填滿完成。
@@ -229,10 +229,10 @@ Buffer.alloc(3, '\u0222');
 
 ###buf.indexOf(value[, byteOffset][, encoding])
 
-- value <String> | <Buffer> | <Number>
-- byteOffset <Number> Default: 0
-- encoding <String> Default: 'utf8'
-- Return: <Number>
+- value [String] | [Buffer] | [Number]
+- byteOffset [Number] Default: 0
+- encoding [String] Default: 'utf8'
+- Return: [Number]
 
 當它返回Buffer的value的起始索引區或者-1時，如果Buffer並沒有包含value，操作類似Array#indexOf()。Value可以是一個字串、一個Buffer、或者一個數字。字符串默認情況下解釋為UTF-8。Buffer將會用到整個Buffer(來跟一部份Buffer使用buf.slice()做比較)。數字可以被訂在0到255之間。
 const buf = Buffer.from('this is a buffer');
@@ -263,10 +263,10 @@ utf16Buffer.indexOf('\u03a3', -4, 'ucs2');
 
 ###buf.includes(value[, byteOffset][, encoding])
 
-- value <String> | <Buffer> | <Number>
-- byteOffset <Number> Default: 0
-- encoding <String> Default: 'utf8'
-- Return: <Boolean>
+- value [String] | [Buffer] | [Number]
+- byteOffset [Number] Default: 0
+- encoding [String] Default: 'utf8'
+- Return: [Boolean]
 
 
 操作類似Array#includes().value可以是一個字串、一個Buffer或一個數字。字串會被解釋為UTF8，除非他被以encoding參數覆蓋。Buffer會用到整個Buffer(來跟一部份Buffer使用buf.slice()做比較)。數字可以被訂在0到255之間。
